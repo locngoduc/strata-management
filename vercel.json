@@ -3,7 +3,7 @@
  "crons": [
   {
    "name": "building",
-   "path": "api/building",
+   "path": "/api/building",
    "schedule": "* * * * *"
   }
  ],
