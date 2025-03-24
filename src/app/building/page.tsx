@@ -26,9 +26,10 @@ export default function Building() {
   fetchBuildingData();
  }, []);
 
+ // GET Request function
  const fetchBuildingData = async () => {
   try {
-   const response = await fetch("/api/building"); //api endpoints
+   const response = await fetch("/api/building", { method: "GET" }); //api endpoints // abc.com xyz.com
    const data = await response.json();
    setBuildingData(data);
   } catch (error) {
@@ -45,6 +46,7 @@ export default function Building() {
   });
  };
 
+ //POST Request function
  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
   e.preventDefault();
   setIsSubmitting(true);
@@ -57,17 +59,20 @@ export default function Building() {
     headers: {
      "Content-Type": "application/json",
     },
-    body: JSON.stringify(formData),
+    body: JSON.stringify(formData), //convert to json
    });
 
    if (!response.ok) {
     throw new Error(`Error: ${response.status}`);
    }
 
+   //if(response.status !== 200){
+   //   throw new Error(`Error: ${response.status}`);
+   // }
+
    setSuccessMessage("Building information submitted successfully!");
    setFormData(initialFormData);
 
-   // Refresh building data after successful submission
    fetchBuildingData();
   } catch (error) {
    console.error("Error submitting building data:", error);
@@ -82,10 +87,9 @@ export default function Building() {
    <div className="bg-white p-6 rounded-lg shadow-md">
     <h1 className="text-2xl text-black font-bold mb-6">Building Management</h1>
 
-    {/* Form for POST request */}
     <div className="mb-8">
      <h2 className="text-xl text-black font-semibold mb-4">Add New Building</h2>
-     <form onSubmit={handleSubmit} className="space-y-4">
+     <form onSubmit={handleSubmit} className="space-y-4 text-black">
       <div>
        <label htmlFor="buildingName" className="block text-sm font-medium text-gray-700 mb-1">
         Building Name
