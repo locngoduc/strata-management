@@ -1,0 +1,17 @@
+{
+ "version": 2,
+ "builds": [
+  {
+   "src": "app/**/*.tsx",
+   "use": "@vercel/next"
+  }
+ ],
+ "regions": ["us-west-2"],
+ "crons": [
+  {
+   "name": "cron-job",
+   "schedule": "0 0 * * *",
+   "command": "node cron-job.js"
+  }
+ ]
+}
