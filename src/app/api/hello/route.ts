@@ -1,7 +1,10 @@
 //api/hello/route.ts
+export const runtime = 'edge';
 
-
-//HTTP GET Request
-export default function GET(): Response{
-  return new Response('Hello from Vercel!');
+export async function GET() {
+  return new Response('Hello from Vercel Edge Function!', {
+    headers: {
+      'Content-Type': 'text/plain'
+    }
+  });
 }
