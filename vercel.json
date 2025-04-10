@@ -6,5 +6,9 @@
    "schedule": "0 0 * * *"
   }
  ],
- "cleanUrls": true
+ "cleanUrls": true,
+ "framework": "nextjs",
+ "buildCommand": "npm run build",
+ "ínstallCommand": "npm install",
+ "devCommand": "next"
 }
