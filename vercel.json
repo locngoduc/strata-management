@@ -1,11 +1,16 @@
 {
  "version": 2,
+ "builds": [
+  {
+   "src": "*.ts",
+   "use": "@vercel/node"
+  }
+ ],
  "crons": [
   {
    "path": "/api/building/route",
-   "schedule": "* * * * *"
+   "schedule": "0 0 * * *"
   }
  ],
- "regions": ["syd1"],
  "cleanUrls": true
 }
