@@ -9,6 +9,6 @@
  "cleanUrls": true,
  "framework": "nextjs",
  "buildCommand": "npm run build",
- "ínstallCommand": "npm install",
+ "installCommand": "npm install",
  "devCommand": "next"
 }
