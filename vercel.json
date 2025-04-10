@@ -12,5 +12,6 @@
    "schedule": "0 0 * * *"
   }
  ],
- "cleanUrls": true
+ "cleanUrls": true,
+ "rewrites": [{ "source": "/(.*)", "destination": "/" }]
 }
