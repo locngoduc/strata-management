@@ -1,9 +1,10 @@
 {
  "version": 2,
  "framework": "nextjs",
- "buildCommand": "CI='' next build",
+ "buildCommand": "CI='' npm run build",
  "installCommand": "npm install",
  "devCommand": "next",
+ "regions": ["syd1"],
  "crons": [
   {
    "path": "/api/building/route",
