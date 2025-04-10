@@ -1,14 +1,14 @@
 {
  "version": 2,
+ "framework": "nextjs",
+ "buildCommand": "next build",
+ "installCommand": "npm install",
+ "devCommand": "next",
  "crons": [
   {
    "path": "/api/building/route",
    "schedule": "0 0 * * *"
   }
  ],
- "cleanUrls": true,
- "framework": "nextjs",
- "buildCommand": "npm run build",
- "installCommand": "npm install",
- "devCommand": "next"
+ "cleanUrls": true
 }
